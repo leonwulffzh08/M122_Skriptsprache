@@ -53,3 +53,96 @@
 | `*`     | beliebig viele Zeichen                    | `ls *.txt`              |
 | `?`     | genau ein beliebiges Zeichen              | `ls datei?.txt`         |
 | `~`     | Home-Verzeichnis des aktuellen Users      | `cd ~`                  |
+
+
+---
+
+
+## 📜 Skript erstellen
+
+```bash
+#!/bin/bash
+# Kommentarzeile
+echo "Hallo Welt"
+````
+
+* Datei erstellen: `nano mein_script.sh`
+* Ausführbar machen: `chmod +x mein_script.sh`
+* Ausführen: `./mein_script.sh`
+
+---
+
+## 🧮 Variablen
+
+```bash
+name="Max"
+echo "Hallo $name"
+```
+
+* Kein Leerzeichen um `=`
+* Zugriff mit `$variablenname`
+
+---
+
+## ✍️ Editor: nano, vi, vim
+
+| Editor | Aufruf          | Hinweis                          |
+| ------ | --------------- | -------------------------------- |
+| nano   | `nano datei.sh` | einfachster Editor               |
+| vi     | `vi datei.sh`   | fortgeschrittener Editor         |
+| vim    | `vim datei.sh`  | "verbesserter vi" mit mehr Tools |
+
+---
+
+## ➕ Arithmetische Operatoren
+
+```bash
+a=5
+b=2
+ergebnis=$((a + b))
+echo $ergebnis  # Ausgabe: 7
+```
+
+| Operator | Bedeutung      |
+| -------- | -------------- |
+| `+`      | Addition       |
+| `-`      | Subtraktion    |
+| `*`      | Multiplikation |
+| `/`      | Division       |
+| `%`      | Modulo (Rest)  |
+
+---
+
+## 🔤 Zeichenketten (Strings)
+
+```bash
+text="Hallo"
+echo "${text} Welt!"  # Ausgabe: Hallo Welt!
+```
+
+| Ausdruck   | Bedeutung                     |
+| ---------- | ----------------------------- |
+| `${var}`   | Sicherer Zugriff auf Variable |
+| `${#text}` | Länge des Strings             |
+
+---
+
+## 🧱 Arrays
+
+```bash
+fruits=("Apfel" "Banane" "Kirsche")
+echo ${fruits[1]}        # Banane
+echo ${#fruits[@]}       # Anzahl Elemente
+echo ${fruits[@]}        # Alle Elemente
+```
+
+| Ausdruck       | Bedeutung           |
+| -------------- | ------------------- |
+| `array=(...)`  | Array definieren    |
+| `${array[0]}`  | Erstes Element      |
+| `${#array[@]}` | Anzahl der Elemente |
+| `${array[@]}`  | Alle Elemente       |
+
+---
+
+
