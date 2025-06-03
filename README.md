@@ -145,4 +145,95 @@ echo ${fruits[@]}        # Alle Elemente
 
 ---
 
+## 🧭 Kontrollstrukturen: if, then, else, elif
+
+```bash
+if [ $x -eq 5 ]; then
+  echo "x ist 5"
+elif [ $x -gt 5 ]; then
+  echo "x ist größer als 5"
+else
+  echo "x ist kleiner als 5"
+fi
+````
+
+### Vergleichsoperatoren
+
+| Operator | Bedeutung      |
+| -------- | -------------- |
+| `-eq`    | gleich         |
+| `-ne`    | ungleich       |
+| `-lt`    | kleiner als    |
+| `-le`    | kleiner/gleich |
+| `-gt`    | größer als     |
+| `-ge`    | größer/gleich  |
+
+---
+
+## 🔁 Schleifen
+
+```bash
+for i in {1..5}; do
+  echo $i
+done
+```
+
+```bash
+while [ $x -le 5 ]; do
+  echo $x
+  x=$((x+1))
+done
+```
+
+---
+
+## 📤 Ein-/Ausgabe & Umleitungen
+
+| Begriff     | Bedeutung                    | Beispiel                   |
+| ----------- | ---------------------------- | -------------------------- |
+| `stdin`     | Standardeingabe              | `read name`                |
+| `stdout`    | Standardausgabe              | `echo "Hallo"`             |
+| `stderr`    | Standardfehlerausgabe        | `ls datei 2> fehler.txt`   |
+| `>`         | Ausgabe überschreiben        | `echo Test > ausgabe.txt`  |
+| `>>`        | Ausgabe anhängen             | `echo Mehr >> ausgabe.txt` |
+| `<`         | Eingabe aus Datei            | `wc -l < datei.txt`        |
+| `2>`        | nur Fehlermeldungen umleiten |                            |
+| `/dev/null` | schwarzes Loch (ignorieren)  | `befehl 2> /dev/null`      |
+
+---
+
+## 🧱 Pipe `|` – Befehle verbinden
+
+```bash
+cat datei.txt | grep "Suche"
+```
+
+| Symbol | Bedeutung |                                    |
+| ------ | --------- | ---------------------------------- |
+| \`     | \`        | Ausgabe von links → Eingabe rechts |
+
+---
+
+## 🪲 Debugging & Fehlersuche
+
+| Methode                      | Beispiel                    |
+| ---------------------------- | --------------------------- |
+| Script mit `bash -x` starten | `bash -x mein_script.sh`    |
+| Variablen & Pfade prüfen     | `echo $variable`            |
+| Exit-Codes prüfen            | `echo $?`                   |
+| `set -e`                     | Script bricht bei Fehler ab |
+
+---
+
+## 🚀 Einbindung & Deployment
+
+| Aktion                     | Beschreibung                               |
+| -------------------------- | ------------------------------------------ |
+| Skript auf Server kopieren | `scp mein_script.sh user@server:/pfad`     |
+| SSH-Verbindung             | `ssh user@server`                          |
+| Ausführung testen          | `./mein_script.sh` oder mit `bash` starten |
+
+---
+
+
 
