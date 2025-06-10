@@ -372,11 +372,11 @@ Cronjob-Infos
 ---
 
 if [ BEDINGUNG ]; then
-  # Befehle wenn wahr
+   Befehle wenn wahr
 elif [ ANDERE BEDINGUNG ]; then
-  # andere Befehle
+   andere Befehle
 else
-  # Befehle wenn falsch
+   Befehle wenn falsch
 fi
 --.
 
