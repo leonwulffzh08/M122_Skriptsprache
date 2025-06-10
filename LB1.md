@@ -404,3 +404,9 @@ farben=("Rot" "Grün" "Blau")
 for farbe in "${farben[@]}"; do
   echo "Farbe: $farbe"
 done
+
+---
+
+while [ BEDINGUNG ]; do
+   Befehle
+done
