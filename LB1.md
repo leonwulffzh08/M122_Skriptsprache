@@ -391,8 +391,16 @@ case $variable in
     # Standardfall
     ;;
 esac
+
 ---
 for i in {1..5}; do
   echo $i
 done
+
 ---
+
+farben=("Rot" "Grün" "Blau")
+
+for farbe in "${farben[@]}"; do
+  echo "Farbe: $farbe"
+done
