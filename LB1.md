@@ -302,3 +302,97 @@ echo "Hallo"
 4. Ausführen: `./mein_script.sh`
 
 ---
+
+/ (Root-Verzeichnis)
+➡️ Das oberste Verzeichnis im Dateisystem (wie der Stamm eines Baumes).
+Darin sind alle wichtigen Dateien, die beim Start des Betriebssystems benötigt werden – bevor andere Verzeichnisse (z. B. /home oder /mnt) geladen/montiert werden.
+
+/bin (Binaries)
+➡️ Enthält wichtige Systembefehle, die immer verfügbar sein müssen – z. B. ls, cp, mv, rm.
+Diese braucht man auch im Rettungsmodus oder beim Booten.
+
+/boot
+➡️ Beinhaltet alles, was man braucht, um Linux überhaupt zu starten:
+
+Bootloader (z. B. GRUB)
+
+Kernel-Dateien (also der Kern des Systems)
+
+/dev (Devices)
+➡️ Enthält Schnittstellen zu Geräten.
+Jedes Gerät (z. B. Festplatte, USB, Tastatur) ist hier als Datei sichtbar – z. B. /dev/sda für eine Festplatte.
+
+/etc (Einstellungen)
+➡️ Beinhaltet Konfigurationsdateien für das System und installierte Programme.
+Beispiel: Netzwerkeinstellungen, Dienste, Benutzer.
+
+/home
+➡️ Hier sind die persönlichen Ordner aller normalen Benutzer.
+Dein Desktop, Downloads etc. liegen z. B. in /home/leon.
+
+/lib (Libraries)
+➡️ Beinhaltet gemeinsam genutzte Bibliotheken (.so Dateien), die beim Systemstart gebraucht werden – ähnlich wie DLLs bei Windows.
+
+/media
+➡️ Hier werden wechselbare Medien (USB-Sticks, externe Festplatten etc.) automatisch eingehängt (gemountet).
+
+/mnt
+➡️ Temporärer Ort, um andere Dateisysteme manuell zu mounten (z. B. Netzlaufwerke, Backup-Partitionen).
+
+/opt (Optional)
+➡️ Hier landen zusätzliche Programme, die nicht standardmäßig mit dem System kommen – z. B. Drittanbieter-Tools oder Spiele.
+
+/root
+➡️ Home-Verzeichnis vom root-Benutzer (also dem System-Admin).
+Nicht zu verwechseln mit /!
+
+/sbin (System-Binaries)
+➡️ Befehle, die man für Systemadministration braucht, z. B. reboot, fdisk, ifconfig.
+Meist nur für den Benutzer root relevant.
+
+/tmp (Temporär)
+➡️ Wird für temporäre Dateien genutzt, z. B. beim Installieren oder Zwischenspeichern.
+Wird oft beim Neustart automatisch geleert.
+
+/usr (User System Resources)
+➡️ Hier liegen zusätzliche Programme, Bibliotheken, Dokumentationen etc.
+Beispiel: /usr/bin für viele normale Programme wie firefox, code, python.
+
+/var (Variable Daten)
+➡️ Für veränderliche Daten, z. B.:
+
+Logdateien (/var/log)
+
+E-Mails
+
+Webserver-Daten
+
+Cronjob-Infos
+
+---
+
+if [ BEDINGUNG ]; then
+  # Befehle wenn wahr
+elif [ ANDERE BEDINGUNG ]; then
+  # andere Befehle
+else
+  # Befehle wenn falsch
+fi
+--.
+
+case $variable in
+  wert1)
+    # Befehl
+    ;;
+  wert2)
+    # anderer Befehl
+    ;;
+  *)
+    # Standardfall
+    ;;
+esac
+---
+for i in {1..5}; do
+  echo $i
+done
+---
